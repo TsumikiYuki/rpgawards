@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RPG Awards Brasil — Meme Zone</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Roboto', sans-serif; background: radial-gradient(circle at top, #0a0a15 0%, #141426 40%, #0b0b18 100%); color:#f5f5f5; overflow-x:hidden; }
+
+.container { max-width:1200px; margin:0 auto; padding:0 20px; }
+
+header { position:fixed; top:0; width:100%; z-index:1000; background: rgba(8,8,16,0.85); backdrop-filter: blur(20px); border-bottom:1px solid rgba(255,215,0,0.15); box-shadow:0 4px 40px rgba(255,215,0,0.05); }
+nav { display:flex; justify-content:space-between; align-items:center; padding:18px 0; }
+.logo { font-family:'Cinzel', serif; font-size:2.4em; color:#ffdf4b; letter-spacing:3px; text-shadow:0 0 20px rgba(255,215,0,0.5); cursor:pointer; transition: transform 0.3s ease; }
+.logo:hover { transform:scale(1.05); }
+.nav-links { display:flex; list-style:none; gap:40px; }
+.nav-links a { color:#eaeaea; text-decoration:none; font-weight:400; position:relative; transition:color 0.3s ease; padding:5px 0; }
+.nav-links a::after { content:''; position:absolute; bottom:-3px; left:0; width:0; height:2px; background:#ffdf4b; transition:width 0.3s ease; }
+.nav-links a:hover { color:#ffdf4b; }
+.nav-links a:hover::after { width:100%; }
+.menu-toggle { display:none; flex-direction:column; cursor:pointer; gap:5px; }
+.menu-toggle span { display:block; height:3px; width:25px; background:#ffdf4b; border-radius:3px; transition:0.3s; }
+
+/* Hot Bar */
+.hot-bar {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background: rgba(8,8,16,0.9);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255,215,0,0.2);
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 10px 0;
+  z-index: 999;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.hot-bar a {
+  color: #eaeaea;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.hot-bar a:hover {
+  background: #ffdf4b;
+  color: #0a0a15;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255,215,0,0.3);
+}
+
+/* Meme Grid */
+.meme-section { padding:150px 0 100px; }
+.section-title { text-align:center; font-family:'Cinzel', serif; font-size:3.2em; color:#ffdf4b; margin-bottom:50px; text-shadow:0 0 25px rgba(255,215,0,0.4); }
+.meme-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:40px; }
+.meme-card { background: rgba(255,255,255,0.05); border:1px solid rgba(255,215,0,0.2); border-radius:25px; padding:20px; text-align:center; transition: all 0.3s ease; backdrop-filter:blur(15px); }
+.meme-card:hover { transform:scale(1.02); box-shadow:0 15px 40px rgba(255,215,0,0.2); border-color: rgba(255,215,0,0.4); }
+.meme-card video, .meme-card img { width:100%; border-radius:15px; max-height:300px; object-fit:cover; }
+
+/* Footer */
+footer { background:#080810; text-align:center; padding:60px 0; border-top:1px solid rgba(255,215,0,0.15); }
+footer p { color:#ccc; font-weight:300; letter-spacing:0.5px; }
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .nav-links { display:none; position:absolute; top:70px; right:0; background:rgba(8,8,16,0.95); flex-direction:column; width:200px; padding:20px; border-radius:0 0 15px 15px; box-shadow:0 15px 40px rgba(0,0,0,0.4); }
+  .nav-links.show { display:flex; }
+  .menu-toggle { display:flex; }
+  .hot-bar { flex-direction: column; gap: 10px; top: 120px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="container">
+    <div class="logo">RPG Awards Brasil</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="meme.html">Meme</a></li>
+      <li><a href="#contact">Contato</a></li>
+    </ul>
+  </nav>
+
+  <div class="hot-bar">
+    <a href="index.html">🏠 Início</a>
+    <a href="meme.html">😂 Meme</a>
+  </div>
+</header>
+
+<section class="meme-section container">
+  <h2 class="section-title">Zona de Memes do RPG</h2>
+  <div class="meme-grid">
+    <!-- Vídeos -->
+    <div class="meme-card"><video src="https://cdn.discordapp.com/attachments/1428478671743619102/1428812206681751656/lv_0_20251017152254.mp4" controls></video></div>
+    <div class="meme-card"><video src="https://cdn.discordapp.com/attachments/1428478671743619102/1428812192693883052/lv_7336853151783423238_20251017152846.mp4" controls></video></div>
+    <div class="meme-card"><video src="https://cdn.discordapp.com/attachments/1289663631184756787/1367640675318894653/lv_0_20250501201406.mp4" controls></video></div>
+    <div class="meme-card"><video src="https://cdn.discordapp.com/attachments/1428478671743619102/1428483983112409248/InShot_20251016_145601923.mp4" controls></video></div>
+    <div class="meme-card"><video src="https://cdn.discordapp.com/attachments/1428478671743619102/1428483861435646003/VID_20250820_141215.mp4" controls></video></div>
+    <div class="meme-card"><video src="https://cdn.discordapp.com/attachments/1428478671743619102/1428483833631604866/InShot_20250818_110537638.mp4" controls></video></div>
+    <div class="meme-card"><video src="https://cdn.discordapp.com/attachments/1428478671743619102/1428483811121037363/InShot_20250817_044202016.mp4" controls></video></div>
+    <div class="meme-card"><video src="https://cdn.discordapp.com/attachments/1428478671743619102/1428483786416455710/lv_0_20250724172622.mp4" controls></video></div>
+    <div class="meme-card"><video src="https://cdn.discordapp.com/attachments/1428478671743619102/1428483172278079508/Video.Guru_20210620_210540573_1.mp4" controls></video></div>
+    <div class="meme-card"><video src="https://cdn.discordapp.com/attachments/1428478671743619102/1428483132096643173/480_30_0.67_Jan142024.mp4" controls></video></div>
+    <div class="meme-card"><video src="https://cdn.discordapp.com/attachments/1428478671743619102/1428482414782709861/VID-20220117-WA0004.mp4" controls></video></div>
+    <div class="meme-card"><video src="https://cdn.discordapp.com/attachments/1428478671743619102/1428482097877876828/Video.Guru_20210621_150741364.mp4" controls></video></div>
+
+    <!-- Imagens -->
+    <div class="meme-card"><img src="https://cdn.discordapp.com/attachments/1428478671743619102/1428806051951808613/image.png" alt="meme1"></div>
+    <div class="meme-card"><img src="https://cdn.discordapp.com/attachments/1428478671743619102/1428731603357532355/Screenshot_20250518_000046_Google.jpg" alt="meme2"></div>
+    <div class="meme-card"><img src="https://cdn.discordapp.com/attachments/1428478671743619102/1428501240454709409/image.png" alt="meme3"></div>
+    <div class="meme-card"><img src="https://cdn.discordapp.com/attachments/1428478671743619102/1428485568609652858/image.png" alt="meme4"></div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 RPG Awards Brasil. Memes e diversão. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.querySelector('.nav-links').classList.toggle('show');
+}
+</script>
+</body>
+</html>
